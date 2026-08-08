@@ -1,0 +1,1103 @@
+[
+  {
+    "product_id": "P1001",
+    "line_id": "sijiantao-qm",
+    "category": "四件套",
+    "name": "全棉长绒棉四件套 1.5m床",
+    "material": "全棉",
+    "size": "1.5m床",
+    "spec": "200×230cm",
+    "tags": [
+      "60支",
+      "A类母婴级",
+      "新疆长绒棉"
+    ],
+    "desc": "60支新疆长绒棉，A类母婴级安全标准，裸睡级亲肤",
+    "key_factors": [
+      "bed_size"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU100100",
+        "color": "奶白",
+        "stock": 0,
+        "price": 277
+      },
+      {
+        "sku_id": "SKU100101",
+        "color": "雾蓝",
+        "stock": 2,
+        "price": 287
+      },
+      {
+        "sku_id": "SKU100102",
+        "color": "浅灰",
+        "stock": 21,
+        "price": 277
+      },
+      {
+        "sku_id": "SKU100103",
+        "color": "驼色",
+        "stock": 52,
+        "price": 287
+      }
+    ],
+    "sales": 3512
+  },
+  {
+    "product_id": "P1002",
+    "line_id": "sijiantao-qm",
+    "category": "四件套",
+    "name": "全棉长绒棉四件套 1.8m床",
+    "material": "全棉",
+    "size": "1.8m床",
+    "spec": "220×240cm",
+    "tags": [
+      "60支",
+      "A类母婴级",
+      "新疆长绒棉"
+    ],
+    "desc": "60支新疆长绒棉，A类母婴级安全标准，裸睡级亲肤",
+    "key_factors": [
+      "bed_size"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU100200",
+        "color": "雾蓝",
+        "stock": 0,
+        "price": 417
+      },
+      {
+        "sku_id": "SKU100201",
+        "color": "浅灰",
+        "stock": 62,
+        "price": 397
+      },
+      {
+        "sku_id": "SKU100202",
+        "color": "藕粉",
+        "stock": 14,
+        "price": 417
+      },
+      {
+        "sku_id": "SKU100203",
+        "color": "豆绿",
+        "stock": 0,
+        "price": 397
+      }
+    ],
+    "sales": 2420
+  },
+  {
+    "product_id": "P1003",
+    "line_id": "sijiantao-qm",
+    "category": "四件套",
+    "name": "全棉长绒棉四件套 2.0m床",
+    "material": "全棉",
+    "size": "2.0m床",
+    "spec": "240×260cm",
+    "tags": [
+      "60支",
+      "A类母婴级",
+      "新疆长绒棉"
+    ],
+    "desc": "60支新疆长绒棉，A类母婴级安全标准，裸睡级亲肤",
+    "key_factors": [
+      "bed_size"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU100300",
+        "color": "浅灰",
+        "stock": 5,
+        "price": 382
+      },
+      {
+        "sku_id": "SKU100301",
+        "color": "奶白",
+        "stock": 69,
+        "price": 362
+      },
+      {
+        "sku_id": "SKU100302",
+        "color": "豆绿",
+        "stock": 24,
+        "price": 382
+      },
+      {
+        "sku_id": "SKU100303",
+        "color": "驼色",
+        "stock": 107,
+        "price": 362
+      }
+    ],
+    "sales": 1926
+  },
+  {
+    "product_id": "P1004",
+    "line_id": "sijiantao-ts",
+    "category": "四件套",
+    "name": "兰精天丝四件套 1.5m床",
+    "material": "天丝",
+    "size": "1.5m床",
+    "spec": "200×230cm",
+    "tags": [
+      "100支",
+      "莱赛尔",
+      "凉感"
+    ],
+    "desc": "100支奥地利兰精天丝，夏季凉感首选，真丝般垂坠",
+    "key_factors": [
+      "bed_size"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU100400",
+        "color": "雾蓝",
+        "stock": 3,
+        "price": 457
+      },
+      {
+        "sku_id": "SKU100401",
+        "color": "豆绿",
+        "stock": 5,
+        "price": 467
+      },
+      {
+        "sku_id": "SKU100402",
+        "color": "驼色",
+        "stock": 44,
+        "price": 457
+      },
+      {
+        "sku_id": "SKU100403",
+        "color": "奶白",
+        "stock": 6,
+        "price": 467
+      }
+    ],
+    "sales": 4224
+  },
+  {
+    "product_id": "P1005",
+    "line_id": "sijiantao-ts",
+    "category": "四件套",
+    "name": "兰精天丝四件套 1.8m床",
+    "material": "天丝",
+    "size": "1.8m床",
+    "spec": "220×240cm",
+    "tags": [
+      "100支",
+      "莱赛尔",
+      "凉感"
+    ],
+    "desc": "100支奥地利兰精天丝，夏季凉感首选，真丝般垂坠",
+    "key_factors": [
+      "bed_size"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU100500",
+        "color": "奶白",
+        "stock": 19,
+        "price": 662
+      },
+      {
+        "sku_id": "SKU100501",
+        "color": "驼色",
+        "stock": 47,
+        "price": 672
+      },
+      {
+        "sku_id": "SKU100502",
+        "color": "藕粉",
+        "stock": 188,
+        "price": 692
+      },
+      {
+        "sku_id": "SKU100503",
+        "color": "豆绿",
+        "stock": 2,
+        "price": 672
+      }
+    ],
+    "sales": 2207
+  },
+  {
+    "product_id": "P1006",
+    "line_id": "sijiantao-ts",
+    "category": "四件套",
+    "name": "兰精天丝四件套 2.0m床",
+    "material": "天丝",
+    "size": "2.0m床",
+    "spec": "240×260cm",
+    "tags": [
+      "100支",
+      "莱赛尔",
+      "凉感"
+    ],
+    "desc": "100支奥地利兰精天丝，夏季凉感首选，真丝般垂坠",
+    "key_factors": [
+      "bed_size"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU100600",
+        "color": "浅灰",
+        "stock": 180,
+        "price": 763
+      },
+      {
+        "sku_id": "SKU100601",
+        "color": "藕粉",
+        "stock": 189,
+        "price": 763
+      },
+      {
+        "sku_id": "SKU100602",
+        "color": "奶白",
+        "stock": 0,
+        "price": 783
+      },
+      {
+        "sku_id": "SKU100603",
+        "color": "雾蓝",
+        "stock": 0,
+        "price": 763
+      }
+    ],
+    "sales": 751
+  },
+  {
+    "product_id": "P1007",
+    "line_id": "sijiantao-mm",
+    "category": "四件套",
+    "name": "全棉磨毛四件套 1.5m床",
+    "material": "磨毛",
+    "size": "1.5m床",
+    "spec": "200×230cm",
+    "tags": [
+      "秋冬",
+      "加厚",
+      "速暖"
+    ],
+    "desc": "全棉磨毛工艺，一触即暖，秋冬怕冷星人福音",
+    "key_factors": [
+      "bed_size"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU100700",
+        "color": "奶白",
+        "stock": 7,
+        "price": 413
+      },
+      {
+        "sku_id": "SKU100701",
+        "color": "藕粉",
+        "stock": 102,
+        "price": 413
+      },
+      {
+        "sku_id": "SKU100702",
+        "color": "浅灰",
+        "stock": 50,
+        "price": 413
+      },
+      {
+        "sku_id": "SKU100703",
+        "color": "驼色",
+        "stock": 0,
+        "price": 423
+      }
+    ],
+    "sales": 4869
+  },
+  {
+    "product_id": "P1008",
+    "line_id": "sijiantao-mm",
+    "category": "四件套",
+    "name": "全棉磨毛四件套 1.8m床",
+    "material": "磨毛",
+    "size": "1.8m床",
+    "spec": "220×240cm",
+    "tags": [
+      "秋冬",
+      "加厚",
+      "速暖"
+    ],
+    "desc": "全棉磨毛工艺，一触即暖，秋冬怕冷星人福音",
+    "key_factors": [
+      "bed_size"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU100800",
+        "color": "藕粉",
+        "stock": 7,
+        "price": 410
+      },
+      {
+        "sku_id": "SKU100801",
+        "color": "浅灰",
+        "stock": 30,
+        "price": 430
+      },
+      {
+        "sku_id": "SKU100802",
+        "color": "奶白",
+        "stock": 40,
+        "price": 400
+      },
+      {
+        "sku_id": "SKU100803",
+        "color": "豆绿",
+        "stock": 3,
+        "price": 410
+      }
+    ],
+    "sales": 3581
+  },
+  {
+    "product_id": "P1009",
+    "line_id": "sijiantao-mm",
+    "category": "四件套",
+    "name": "全棉磨毛四件套 2.0m床",
+    "material": "磨毛",
+    "size": "2.0m床",
+    "spec": "240×260cm",
+    "tags": [
+      "秋冬",
+      "加厚",
+      "速暖"
+    ],
+    "desc": "全棉磨毛工艺，一触即暖，秋冬怕冷星人福音",
+    "key_factors": [
+      "bed_size"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU100900",
+        "color": "豆绿",
+        "stock": 0,
+        "price": 525
+      },
+      {
+        "sku_id": "SKU100901",
+        "color": "驼色",
+        "stock": 8,
+        "price": 495
+      },
+      {
+        "sku_id": "SKU100902",
+        "color": "藕粉",
+        "stock": 36,
+        "price": 505
+      },
+      {
+        "sku_id": "SKU100903",
+        "color": "雾蓝",
+        "stock": 164,
+        "price": 505
+      }
+    ],
+    "sales": 464
+  },
+  {
+    "product_id": "P1010",
+    "line_id": "beixin-sc",
+    "category": "被芯",
+    "name": "桑蚕丝被 1.5m床",
+    "material": "蚕丝",
+    "size": "1.5m床",
+    "spec": "200×230cm",
+    "tags": [
+      "100%桑蚕丝",
+      "子母被",
+      "四季通用"
+    ],
+    "desc": "100%双宫桑蚕丝长丝，子母被设计四季可用",
+    "key_factors": [
+      "bed_size",
+      "season",
+      "sleep_habit"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU101000",
+        "color": "藕粉",
+        "stock": 35,
+        "price": 1556
+      },
+      {
+        "sku_id": "SKU101001",
+        "color": "奶白",
+        "stock": 0,
+        "price": 1556
+      },
+      {
+        "sku_id": "SKU101002",
+        "color": "驼色",
+        "stock": 38,
+        "price": 1556
+      },
+      {
+        "sku_id": "SKU101003",
+        "color": "豆绿",
+        "stock": 3,
+        "price": 1566
+      }
+    ],
+    "sales": 4794
+  },
+  {
+    "product_id": "P1011",
+    "line_id": "beixin-sc",
+    "category": "被芯",
+    "name": "桑蚕丝被 1.8m床",
+    "material": "蚕丝",
+    "size": "1.8m床",
+    "spec": "220×240cm",
+    "tags": [
+      "100%桑蚕丝",
+      "子母被",
+      "四季通用"
+    ],
+    "desc": "100%双宫桑蚕丝长丝，子母被设计四季可用",
+    "key_factors": [
+      "bed_size",
+      "season",
+      "sleep_habit"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU101100",
+        "color": "奶白",
+        "stock": 179,
+        "price": 1672
+      },
+      {
+        "sku_id": "SKU101101",
+        "color": "雾蓝",
+        "stock": 71,
+        "price": 1672
+      },
+      {
+        "sku_id": "SKU101102",
+        "color": "驼色",
+        "stock": 13,
+        "price": 1672
+      },
+      {
+        "sku_id": "SKU101103",
+        "color": "豆绿",
+        "stock": 61,
+        "price": 1662
+      }
+    ],
+    "sales": 4831
+  },
+  {
+    "product_id": "P1012",
+    "line_id": "beixin-sc",
+    "category": "被芯",
+    "name": "桑蚕丝被 2.0m床",
+    "material": "蚕丝",
+    "size": "2.0m床",
+    "spec": "240×260cm",
+    "tags": [
+      "100%桑蚕丝",
+      "子母被",
+      "四季通用"
+    ],
+    "desc": "100%双宫桑蚕丝长丝，子母被设计四季可用",
+    "key_factors": [
+      "bed_size",
+      "season",
+      "sleep_habit"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU101200",
+        "color": "藕粉",
+        "stock": 29,
+        "price": 1920
+      },
+      {
+        "sku_id": "SKU101201",
+        "color": "雾蓝",
+        "stock": 50,
+        "price": 1920
+      },
+      {
+        "sku_id": "SKU101202",
+        "color": "驼色",
+        "stock": 195,
+        "price": 1920
+      },
+      {
+        "sku_id": "SKU101203",
+        "color": "奶白",
+        "stock": 22,
+        "price": 1940
+      }
+    ],
+    "sales": 613
+  },
+  {
+    "product_id": "P1013",
+    "line_id": "beixin-dd",
+    "category": "被芯",
+    "name": "大豆纤维被 1.5m床",
+    "material": "大豆纤维",
+    "size": "1.5m床",
+    "spec": "200×230cm",
+    "tags": [
+      "可机洗",
+      "性价比",
+      "抗菌"
+    ],
+    "desc": "大豆蛋白纤维，整被可机洗，学生党/租房党首选",
+    "key_factors": [
+      "bed_size",
+      "season",
+      "sleep_habit"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU101300",
+        "color": "雾蓝",
+        "stock": 128,
+        "price": 261
+      },
+      {
+        "sku_id": "SKU101301",
+        "color": "驼色",
+        "stock": 127,
+        "price": 261
+      },
+      {
+        "sku_id": "SKU101302",
+        "color": "浅灰",
+        "stock": 80,
+        "price": 261
+      },
+      {
+        "sku_id": "SKU101303",
+        "color": "豆绿",
+        "stock": 104,
+        "price": 261
+      }
+    ],
+    "sales": 2212
+  },
+  {
+    "product_id": "P1014",
+    "line_id": "beixin-dd",
+    "category": "被芯",
+    "name": "大豆纤维被 1.8m床",
+    "material": "大豆纤维",
+    "size": "1.8m床",
+    "spec": "220×240cm",
+    "tags": [
+      "可机洗",
+      "性价比",
+      "抗菌"
+    ],
+    "desc": "大豆蛋白纤维，整被可机洗，学生党/租房党首选",
+    "key_factors": [
+      "bed_size",
+      "season",
+      "sleep_habit"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU101400",
+        "color": "豆绿",
+        "stock": 0,
+        "price": 397
+      },
+      {
+        "sku_id": "SKU101401",
+        "color": "雾蓝",
+        "stock": 8,
+        "price": 367
+      },
+      {
+        "sku_id": "SKU101402",
+        "color": "奶白",
+        "stock": 0,
+        "price": 377
+      },
+      {
+        "sku_id": "SKU101403",
+        "color": "驼色",
+        "stock": 0,
+        "price": 397
+      }
+    ],
+    "sales": 4821
+  },
+  {
+    "product_id": "P1015",
+    "line_id": "beixin-dd",
+    "category": "被芯",
+    "name": "大豆纤维被 2.0m床",
+    "material": "大豆纤维",
+    "size": "2.0m床",
+    "spec": "240×260cm",
+    "tags": [
+      "可机洗",
+      "性价比",
+      "抗菌"
+    ],
+    "desc": "大豆蛋白纤维，整被可机洗，学生党/租房党首选",
+    "key_factors": [
+      "bed_size",
+      "season",
+      "sleep_habit"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU101500",
+        "color": "浅灰",
+        "stock": 61,
+        "price": 442
+      },
+      {
+        "sku_id": "SKU101501",
+        "color": "豆绿",
+        "stock": 24,
+        "price": 432
+      },
+      {
+        "sku_id": "SKU101502",
+        "color": "驼色",
+        "stock": 111,
+        "price": 442
+      },
+      {
+        "sku_id": "SKU101503",
+        "color": "奶白",
+        "stock": 96,
+        "price": 462
+      }
+    ],
+    "sales": 3422
+  },
+  {
+    "product_id": "P1016",
+    "line_id": "beixin-yr",
+    "category": "被芯",
+    "name": "95白鹅绒被 1.5m床",
+    "material": "羽绒",
+    "size": "1.5m床",
+    "spec": "200×230cm",
+    "tags": [
+      "95%绒子含量",
+      "800+蓬松度",
+      "静音面料"
+    ],
+    "desc": "95%东北白鹅绒，800+蓬松度，-15℃深冬无忧",
+    "key_factors": [
+      "bed_size",
+      "season",
+      "sleep_habit"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU101600",
+        "color": "驼色",
+        "stock": 148,
+        "price": 2110
+      },
+      {
+        "sku_id": "SKU101601",
+        "color": "浅灰",
+        "stock": 21,
+        "price": 2120
+      },
+      {
+        "sku_id": "SKU101602",
+        "color": "雾蓝",
+        "stock": 10,
+        "price": 2140
+      },
+      {
+        "sku_id": "SKU101603",
+        "color": "奶白",
+        "stock": 13,
+        "price": 2110
+      }
+    ],
+    "sales": 4442
+  },
+  {
+    "product_id": "P1017",
+    "line_id": "beixin-yr",
+    "category": "被芯",
+    "name": "95白鹅绒被 1.8m床",
+    "material": "羽绒",
+    "size": "1.8m床",
+    "spec": "220×240cm",
+    "tags": [
+      "95%绒子含量",
+      "800+蓬松度",
+      "静音面料"
+    ],
+    "desc": "95%东北白鹅绒，800+蓬松度，-15℃深冬无忧",
+    "key_factors": [
+      "bed_size",
+      "season",
+      "sleep_habit"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU101700",
+        "color": "奶白",
+        "stock": 6,
+        "price": 1873
+      },
+      {
+        "sku_id": "SKU101701",
+        "color": "驼色",
+        "stock": 162,
+        "price": 1883
+      },
+      {
+        "sku_id": "SKU101702",
+        "color": "雾蓝",
+        "stock": 45,
+        "price": 1873
+      },
+      {
+        "sku_id": "SKU101703",
+        "color": "藕粉",
+        "stock": 188,
+        "price": 1883
+      }
+    ],
+    "sales": 3033
+  },
+  {
+    "product_id": "P1018",
+    "line_id": "beixin-yr",
+    "category": "被芯",
+    "name": "95白鹅绒被 2.0m床",
+    "material": "羽绒",
+    "size": "2.0m床",
+    "spec": "240×260cm",
+    "tags": [
+      "95%绒子含量",
+      "800+蓬松度",
+      "静音面料"
+    ],
+    "desc": "95%东北白鹅绒，800+蓬松度，-15℃深冬无忧",
+    "key_factors": [
+      "bed_size",
+      "season",
+      "sleep_habit"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU101800",
+        "color": "奶白",
+        "stock": 16,
+        "price": 2252
+      },
+      {
+        "sku_id": "SKU101801",
+        "color": "雾蓝",
+        "stock": 34,
+        "price": 2262
+      },
+      {
+        "sku_id": "SKU101802",
+        "color": "藕粉",
+        "stock": 95,
+        "price": 2282
+      },
+      {
+        "sku_id": "SKU101803",
+        "color": "豆绿",
+        "stock": 44,
+        "price": 2262
+      }
+    ],
+    "sales": 3571
+  },
+  {
+    "product_id": "P1019",
+    "line_id": "zhenxin-rj",
+    "category": "枕芯",
+    "name": "泰国乳胶枕 均码",
+    "material": "乳胶",
+    "size": "均码",
+    "spec": "标准",
+    "tags": [
+      "93%乳胶含量",
+      "波浪曲线",
+      "护颈"
+    ],
+    "desc": "93%泰国天然乳胶，波浪曲线设计，侧睡仰睡双区支撑",
+    "key_factors": [
+      "sleep_habit"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU101900",
+        "color": "藕粉",
+        "stock": 37,
+        "price": 259
+      },
+      {
+        "sku_id": "SKU101901",
+        "color": "驼色",
+        "stock": 14,
+        "price": 279
+      },
+      {
+        "sku_id": "SKU101902",
+        "color": "雾蓝",
+        "stock": 2,
+        "price": 259
+      },
+      {
+        "sku_id": "SKU101903",
+        "color": "浅灰",
+        "stock": 3,
+        "price": 249
+      }
+    ],
+    "sales": 646
+  },
+  {
+    "product_id": "P1020",
+    "line_id": "zhenxin-yr",
+    "category": "枕芯",
+    "name": "羽绒枕 均码",
+    "material": "羽绒",
+    "size": "均码",
+    "spec": "标准",
+    "tags": [
+      "三层立体",
+      "可水洗",
+      "酒店同款"
+    ],
+    "desc": "三层立体羽绒枕，五星酒店同款睡感，可整枕水洗",
+    "key_factors": [
+      "sleep_habit"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU102000",
+        "color": "豆绿",
+        "stock": 33,
+        "price": 445
+      },
+      {
+        "sku_id": "SKU102001",
+        "color": "藕粉",
+        "stock": 78,
+        "price": 445
+      },
+      {
+        "sku_id": "SKU102002",
+        "color": "浅灰",
+        "stock": 0,
+        "price": 445
+      },
+      {
+        "sku_id": "SKU102003",
+        "color": "雾蓝",
+        "stock": 8,
+        "price": 435
+      }
+    ],
+    "sales": 4401
+  },
+  {
+    "product_id": "P1021",
+    "line_id": "tan-cj",
+    "category": "毯类",
+    "name": "新疆棉纱布盖毯 均码",
+    "material": "全棉",
+    "size": "均码",
+    "spec": "标准",
+    "tags": [
+      "六层纱布",
+      "空调毯",
+      "A类"
+    ],
+    "desc": "六层新疆棉纱布，空调房/沙发/办公室多场景",
+    "key_factors": [
+      "season"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU102100",
+        "color": "豆绿",
+        "stock": 19,
+        "price": 139
+      },
+      {
+        "sku_id": "SKU102101",
+        "color": "藕粉",
+        "stock": 121,
+        "price": 129
+      },
+      {
+        "sku_id": "SKU102102",
+        "color": "驼色",
+        "stock": 24,
+        "price": 159
+      },
+      {
+        "sku_id": "SKU102103",
+        "color": "雾蓝",
+        "stock": 26,
+        "price": 139
+      }
+    ],
+    "sales": 1183
+  },
+  {
+    "product_id": "P1022",
+    "line_id": "chuangdian-rj",
+    "category": "床垫",
+    "name": "乳胶椰棕床垫 1.5m床",
+    "material": "乳胶椰棕",
+    "size": "1.5m床",
+    "spec": "200×230cm",
+    "tags": [
+      "软硬两用",
+      "护脊",
+      "可拆洗"
+    ],
+    "desc": "乳胶+椰棕双面设计，一面偏软一面护脊，外套可拆洗",
+    "key_factors": [
+      "bed_size",
+      "sleep_habit"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU102200",
+        "color": "浅灰",
+        "stock": 13,
+        "price": 943
+      },
+      {
+        "sku_id": "SKU102201",
+        "color": "豆绿",
+        "stock": 103,
+        "price": 943
+      },
+      {
+        "sku_id": "SKU102202",
+        "color": "驼色",
+        "stock": 56,
+        "price": 943
+      },
+      {
+        "sku_id": "SKU102203",
+        "color": "雾蓝",
+        "stock": 9,
+        "price": 943
+      }
+    ],
+    "sales": 3482
+  },
+  {
+    "product_id": "P1023",
+    "line_id": "chuangdian-rj",
+    "category": "床垫",
+    "name": "乳胶椰棕床垫 1.8m床",
+    "material": "乳胶椰棕",
+    "size": "1.8m床",
+    "spec": "220×240cm",
+    "tags": [
+      "软硬两用",
+      "护脊",
+      "可拆洗"
+    ],
+    "desc": "乳胶+椰棕双面设计，一面偏软一面护脊，外套可拆洗",
+    "key_factors": [
+      "bed_size",
+      "sleep_habit"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU102300",
+        "color": "驼色",
+        "stock": 26,
+        "price": 1542
+      },
+      {
+        "sku_id": "SKU102301",
+        "color": "藕粉",
+        "stock": 93,
+        "price": 1552
+      },
+      {
+        "sku_id": "SKU102302",
+        "color": "浅灰",
+        "stock": 57,
+        "price": 1552
+      },
+      {
+        "sku_id": "SKU102303",
+        "color": "豆绿",
+        "stock": 2,
+        "price": 1542
+      }
+    ],
+    "sales": 1538
+  },
+  {
+    "product_id": "P1024",
+    "line_id": "chuangdian-rj",
+    "category": "床垫",
+    "name": "乳胶椰棕床垫 2.0m床",
+    "material": "乳胶椰棕",
+    "size": "2.0m床",
+    "spec": "240×260cm",
+    "tags": [
+      "软硬两用",
+      "护脊",
+      "可拆洗"
+    ],
+    "desc": "乳胶+椰棕双面设计，一面偏软一面护脊，外套可拆洗",
+    "key_factors": [
+      "bed_size",
+      "sleep_habit"
+    ],
+    "skus": [
+      {
+        "sku_id": "SKU102400",
+        "color": "雾蓝",
+        "stock": 137,
+        "price": 1095
+      },
+      {
+        "sku_id": "SKU102401",
+        "color": "豆绿",
+        "stock": 115,
+        "price": 1095
+      },
+      {
+        "sku_id": "SKU102402",
+        "color": "驼色",
+        "stock": 64,
+        "price": 1125
+      },
+      {
+        "sku_id": "SKU102403",
+        "color": "奶白",
+        "stock": 68,
+        "price": 1105
+      }
+    ],
+    "sales": 304
+  }
+]

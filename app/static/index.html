@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>织语 · 家纺智能导购</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; background: #f5f3ef; height: 100vh; display: flex; flex-direction: column; }
+  header { background: #7c6a54; color: #fff; padding: 14px 20px; display: flex; align-items: center; gap: 10px; }
+  header .logo { font-size: 20px; font-weight: 600; }
+  header .sub { font-size: 12px; opacity: .8; }
+  #chat { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 12px; max-width: 860px; width: 100%; margin: 0 auto; }
+  .msg { max-width: 78%; padding: 10px 14px; border-radius: 12px; line-height: 1.6; font-size: 14px; white-space: pre-wrap; }
+  .msg.user { align-self: flex-end; background: #7c6a54; color: #fff; border-bottom-right-radius: 4px; }
+  .msg.bot { align-self: flex-start; background: #fff; border: 1px solid #e6e0d5; border-bottom-left-radius: 4px; }
+  .msg.system { align-self: center; background: #fdf6e3; color: #8a6d3b; font-size: 12px; border: 1px solid #f0e5c8; }
+  .card { align-self: flex-start; background: #fff; border: 1px solid #e6e0d5; border-radius: 12px; padding: 12px; max-width: 78%; }
+  .card .name { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+  .card .price { color: #c0392b; font-weight: 600; }
+  .card .reason { font-size: 12px; color: #666; margin-top: 6px; line-height: 1.5; }
+  #input-bar { background: #fff; border-top: 1px solid #e6e0d5; padding: 12px 20px; }
+  #input-bar .inner { max-width: 860px; margin: 0 auto; display: flex; gap: 10px; }
+  #input { flex: 1; border: 1px solid #ddd; border-radius: 20px; padding: 10px 16px; font-size: 14px; outline: none; }
+  #input:focus { border-color: #7c6a54; }
+  #send { background: #7c6a54; color: #fff; border: none; border-radius: 20px; padding: 10px 22px; font-size: 14px; cursor: pointer; }
+  #send:disabled { opacity: .5; cursor: not-allowed; }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">织语</div>
+  <div class="sub">家纺客服导购一体化智能体 · 演示版</div>
+</header>
+<div id="chat"></div>
+<div id="input-bar">
+  <div class="inner">
+    <input id="input" placeholder="问我任何家纺问题，比如：1米8的床推荐一款四件套" autofocus>
+    <button id="send">发送</button>
+  </div>
+</div>
+<script>
+  const chat = document.getElementById('chat');
+  const input = document.getElementById('input');
+  const sendBtn = document.getElementById('send');
+  let sessionId = null;
+
+  fetch('/api/session', {method: 'POST'})
+    .then(r => r.json())
+    .then(d => {
+      sessionId = d.session_id;
+      addMsg('亲，欢迎来到织语家纺～我是您的专属导购小织。\n\n您可以直接问我，比如：\n· "1米8的床推荐一款四件套"\n· "想给妈妈选个生日礼物"\n· "蚕丝被怎么保养"\n· "帮我查下订单 DD20260801001"', 'bot');
+    })
+    .catch(() => addMsg('连接服务失败，请确认服务已启动后刷新页面', 'system'));
+
+  function addMsg(text, cls) {
+    const div = document.createElement('div');
+    div.className = 'msg ' + cls;
+    div.textContent = text;
+    chat.appendChild(div);
+    chat.scrollTop = chat.scrollHeight;
+    return div;
+  }
+
+  async function send() {
+    const text = input.value.trim();
+    if (!text || !sessionId) return;
+    input.value = '';
+    sendBtn.disabled = true;
+    addMsg(text, 'user');
+    const botMsg = addMsg('…', 'bot');
+
+    try {
+      const resp = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({message: text, session_id: sessionId})
+      });
+      const reader = resp.body.getReader();
+      const decoder = new TextDecoder();
+      let buf = '', acc = '';
+      botMsg.textContent = '';
+      while (true) {
+        const {done, value} = await reader.read();
+        if (done) break;
+        buf += decoder.decode(value, {stream: true});
+        const events = buf.split(/\r?\n\r?\n/);
+        buf = events.pop();
+        for (const ev of events) {
+          const lines = ev.split(/\r?\n/);
+          const type = lines.find(l => l.startsWith('event:'))?.slice(6).trim();
+          const data = lines.find(l => l.startsWith('data:'))?.slice(5).replace(/^ /, '') || '';
+          if (type === 'token') { acc += data; botMsg.textContent = acc; chat.scrollTop = chat.scrollHeight; }
+          else if (type === 'card') {
+            const c = JSON.parse(data);
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `<div class="name"></div><div class="price"></div><div class="reason"></div>`;
+            card.querySelector('.name').textContent = c.name;
+            card.querySelector('.price').textContent = '¥' + c.price;
+            card.querySelector('.reason').textContent = c.reason || '';
+            chat.appendChild(card);
+          }
+          else if (type === 'handoff') { addMsg('已为您转接人工客服，会话摘要已同步', 'system'); }
+        }
+      }
+      if (!acc) botMsg.textContent = '（暂时没有回复，请稍后再试）';
+    } catch (e) {
+      botMsg.textContent = '网络异常，请稍后重试';
+    }
+    sendBtn.disabled = false;
+    input.focus();
+  }
+
+  sendBtn.onclick = send;
+  input.onkeydown = e => { if (e.key === 'Enter') send(); };
+</script>
+</body>
+</html>
