@@ -5,9 +5,28 @@ build/
 dist/
 wheels/
 *.egg-info
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
 
 # Virtual environments
 .venv
 
 # Local secrets
 .env
+
+# Local editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Runtime output
+*.log
+
+# Generated evaluation reports: keep only the curated public results
+eval/report-*.md
+!eval/report-v8-final.md
+!eval/report-holdout-1.2-3r.md

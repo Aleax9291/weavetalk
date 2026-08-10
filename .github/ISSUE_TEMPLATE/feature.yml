@@ -1,0 +1,24 @@
+name: 功能建议
+description: 建议新的能力、场景或工程改进
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 使用场景
+      description: 你希望解决什么问题？
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建议方案
+      description: 描述期望行为、可能的实现和替代方案
+    validations:
+      required: true
+  - type: textarea
+    id: evaluation
+    attributes:
+      label: 验收方式
+      description: 如何判断功能有效且没有对固定评测集过拟合？

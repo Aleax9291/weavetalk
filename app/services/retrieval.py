@@ -43,9 +43,20 @@ class Retriever:
     def _load_docs(self) -> None:
         products = json.loads((DATA_DIR / "products.json").read_text("utf-8"))
         for p in products:
+            prices = [s["price"] for s in p["skus"]]
+            parts = []
+            for s in p["skus"]:
+                if s["stock"] == 0:
+                    state = "缺货"
+                elif s["stock"] <= 5:
+                    state = f"仅剩{s['stock']}件"
+                else:
+                    state = "有货"
+                parts.append(f"{s['color']}（{state}）")
             text = (
                 f"{p['name']} {p['category']} 材质{p['material']} "
-                f"规格{p['spec']} {' '.join(p['tags'])} {p['desc']}"
+                f"规格{p['spec']} {' '.join(p['tags'])} {p['desc']} "
+                f"价格{min(prices)}-{max(prices)}元 颜色库存：{'、'.join(parts)}"
             )
             self.docs.append({
                 "doc_id": p["product_id"], "kind": "product",
@@ -116,7 +127,6 @@ class Retriever:
         self, query: str, *, kind: str | None = None, top_k: int = 5
     ) -> list[dict]:
         """RRF 融合排序。kind 限定 'product' / 'knowledge'。"""
-        n = len(self.docs)
         bm25_ranks = self._bm25_rank(query)
         vector_ranks = self._vector_rank(query) if self.vector_ready else None
 
