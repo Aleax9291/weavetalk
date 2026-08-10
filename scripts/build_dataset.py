@@ -179,7 +179,7 @@ for line in PRODUCT_LINES:
 # ---------------------------------------------------------------- 生成评价
 reviews = []
 rid = 10000
-line_map = {l["line_id"]: l for l in PRODUCT_LINES}
+line_map = {line["line_id"]: line for line in PRODUCT_LINES}
 for p in products:
     line = line_map[p["line_id"]]
     n = random.randint(30, 80)

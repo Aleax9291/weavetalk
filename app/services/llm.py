@@ -57,21 +57,34 @@ class LLMClient:
     async def chat_stream(
         self, messages: list[dict], *, temperature: float = 0.5
     ) -> AsyncIterator[str]:
-        """流式输出，逐 token 产出。"""
-        try:
-            stream = await self._client.chat.completions.create(
-                model=self.model,
-                messages=messages,
-                temperature=temperature,
-                stream=True,
-            )
-            async for chunk in stream:
-                delta = chunk.choices[0].delta.content
-                if delta:
-                    yield delta
-        except (APIError, RateLimitError) as e:
-            logger.warning(f"LLM stream failed: {e}")
-            return
+        """流式输出，逐 token 产出。
+
+        空响应重试：API 偶发返回"流正常结束但零内容"（v2 冒烟测试实测命中），
+        零产出时自动重试一次，再退化为非流式调用，避免用户收到兜底话术。
+        """
+        for attempt in range(2):
+            produced = False
+            try:
+                stream = await self._client.chat.completions.create(
+                    model=self.model,
+                    messages=messages,
+                    temperature=temperature,
+                    stream=True,
+                )
+                async for chunk in stream:
+                    delta = chunk.choices[0].delta.content
+                    if delta:
+                        produced = True
+                        yield delta
+            except (APIError, RateLimitError) as e:
+                logger.warning(f"LLM stream failed (attempt {attempt + 1}): {e}")
+            if produced:
+                return
+            logger.warning(f"LLM stream empty (attempt {attempt + 1}), retrying")
+        # 最终降级：非流式补一次
+        resp = await self.chat(messages, temperature=temperature)
+        if resp and resp.get("content"):
+            yield resp["content"]
 
 
 _llm: LLMClient | None = None

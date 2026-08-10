@@ -44,4 +44,5 @@ class AgentState(TypedDict, total=False):
     gen_messages: list[dict]       # 汇总节点产出的最终生成消息（端点流式输出）
     answer_hint: str               # 汇总节点给最终生成的整合指令
     final_text: str                # 确定性回复（转人工/攻击兜底，跳过长文本生成）
+    evidence: dict                 # 推荐证据（评价聚合+候选价格），随 SSE 外发给评估 judge 核验数字
     trace: list[dict]              # 全链路轨迹（评估归因用）

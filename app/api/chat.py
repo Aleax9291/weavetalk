@@ -16,38 +16,56 @@ import asyncio
 import json
 import uuid
 
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 from langchain_core.messages import AIMessage, HumanMessage
-from pydantic import BaseModel
+from loguru import logger
+from pydantic import BaseModel, Field
 from sse_starlette.sse import EventSourceResponse
 
 from app.agent.graph import get_graph
 from app.services.llm import get_llm
 
 router = APIRouter()
+MAX_SESSIONS = 1_000
 
 # session_id -> {"messages": [...], "profile": {...}, "clarify_rounds": int}
 SESSIONS: dict[str, dict] = {}
 
 
 class ChatRequest(BaseModel):
-    message: str
-    session_id: str | None = None
+    message: str = Field(min_length=1, max_length=2_000)
+    session_id: str | None = Field(default=None, pattern=r"^[0-9a-f]{32}$")
+
+
+def _create_session() -> tuple[str, dict]:
+    """Create a bounded in-memory demo session.
+
+    This is deliberately lightweight. Production deployments should replace it
+    with authenticated, expiring server-side storage.
+    """
+    if len(SESSIONS) >= MAX_SESSIONS:
+        SESSIONS.pop(next(iter(SESSIONS)))
+    sid = uuid.uuid4().hex
+    session = {"messages": [], "profile": {}, "clarify_rounds": 0}
+    SESSIONS[sid] = session
+    return sid, session
 
 
 @router.post("/session")
 async def new_session() -> dict:
-    sid = uuid.uuid4().hex[:16]
-    SESSIONS[sid] = {"messages": [], "profile": {}, "clarify_rounds": 0}
+    sid, _ = _create_session()
     return {"session_id": sid}
 
 
 @router.post("/chat")
 async def chat(req: ChatRequest) -> EventSourceResponse:
-    sid = req.session_id or uuid.uuid4().hex[:16]
-    session = SESSIONS.setdefault(
-        sid, {"messages": [], "profile": {}, "clarify_rounds": 0}
-    )
+    if req.session_id is None:
+        sid, session = _create_session()
+    else:
+        sid = req.session_id
+        session = SESSIONS.get(sid)
+        if session is None:
+            raise HTTPException(status_code=404, detail="session not found")
 
     async def event_stream():
         state_in = {
@@ -57,7 +75,8 @@ async def chat(req: ChatRequest) -> EventSourceResponse:
         }
         try:
             result = await get_graph().ainvoke(state_in)
-        except Exception as e:  # noqa: BLE001 — 顶层降级：任何异常都给用户兜底话术
+        except Exception:  # noqa: BLE001 — 顶层降级：任何异常都给用户兜底话术
+            logger.exception("agent invocation failed")
             yield {"event": "token", "data": "亲，系统有点忙，请稍后再试一下～"}
             yield {"event": "done", "data": ""}
             return
@@ -89,6 +108,10 @@ async def chat(req: ChatRequest) -> EventSourceResponse:
 
         for card in result.get("cards", []):
             yield {"event": "card", "data": json.dumps(card, ensure_ascii=False)}
+        # 证据外发：推荐引用的评价/价格数据（评估 judge 据此核验回答数字，前端不消费）
+        if result.get("evidence"):
+            yield {"event": "evidence",
+                   "data": json.dumps(result["evidence"], ensure_ascii=False)}
         if result.get("handoff"):
             yield {"event": "handoff", "data": result.get("handoff_summary", "")}
 
